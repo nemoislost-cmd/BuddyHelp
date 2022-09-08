@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+    
+<?php
+
+session_start();
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
+    // last request was more than 30 minutes ago
+session_unset(); // unset $_SESSION variable for the run-time
+session_destroy(); 
+header("location: ../BuddyHelp/index.php");// destroy session data in storage}
+}
+?>
+    
+    
+<html lang="en">
+    <head>
+       <?php
+        include "head.inc.php";    
+        ?>
+    </head>
+    <body>
+        <?php
+            include "nav.inc.php"
+        ?>
+        <main class = "container">
+            <div class="formdiv">
+                <h1>New Service:</h1>
+            <form id="newform" action = "addservice.php" method="post">
+                <div class="form-group">
+                    <label for="modCode">Module Code:</label>
+                    <input class="form-control" type="text" id="modCode" 
+                           required name="modCode" placeholder="Enter Module Code">
+                </div>
+                
+                <div class="form-group">
+                    <label for="modName">Module Name:</label>
+                    <input class="form-control" type="text" id="modName" 
+                            required name="modName" placeholder="Enter Module Name">
+                </div>
+                
+                <div class="form-check">
+                    <label>Type of Service:</label><br>
+                    <input  type="radio" id="ftf" 
+                            required name="type" value="Face-To-Face">
+                    <label for="ftf">Face-To-Face</label><br>
+                    <input  type="radio" id="online" 
+                           required name="type" value="Online">
+                    <label for="online">Online</label><br>
+                </div>
+                
+                <div class="form-group">
+                    <label for="grade">Grade:</label>
+                    <input class="form-control" type="text" id="grade" 
+                            required name="grade" placeholder="Enter Your Grade For The Module">
+                </div>
+                                
+                <div class="form-group">
+                    <div class="col-md-4" id="rateform">
+                    <div class="left">
+                    <label for="rate">Rate:</label>
+                    </div>
+                    <input class="form-control" type="text" id="rate"
+                            required name="rate" placeholder="Enter Your Rate" style="width:100%">
+                    </div>
+                    
+                    <div class="col-md-4" id="timeform">
+                    <div>
+                    <select name="time" id="time" style="width:50%">    
+                        <option value="30min">30 min</option>    
+                        <option value="45min">45 min</option>    
+                        <option value="hour" selected="selected">1 hour</option>    
+                    </select>    
+                    </div>
+                   </div>
+                </div>
+        
+                
+                    
+                <div class="form-check">
+                    <div class="col-md-4" id="rateform">
+                    <div class="left">
+                    <label>Days Available:</label><br>
+                    </div>
+                    <input  type="checkbox" id="Monday"
+                             name="date[]" value="Monday">
+                    <label for="Monday"> Monday</label><br>
+                    <input  type="checkbox" id="Tuesday"
+                             name="date[]" value="Tuesday">
+                    <label for="Tuesday"> Tuesday</label><br>
+                    <input  type="checkbox" id="Wednesday"
+                             name="date[]" value="Wednesday">
+                    <label for="Wednesday"> Wednesday</label><br>
+                    <input  type="checkbox" id="Thursday"
+                             name="date[]" value="Thursday">
+                    <label for="Thursday"> Thursday</label><br>
+                    <input  type="checkbox" id="Friday"
+                             name="date[]" value="Friday">
+                    <label for="Friday"> Friday</label><br>
+                    <input  type="checkbox" id="Saturday"
+                             name="date[]" value="Saturday">
+                    <label for="Saturday"> Saturday</label><br>
+                    <input  type="checkbox" id="Sunday"
+                             name="date[]" value="Sunday">
+                    <label for="Sunday"> Sunday</label><br>
+                    </div>
+                    
+                     <div class="col-md-4" id="timeform">
+                    <div>
+                    <label>Module Year</label><br>
+                    <select name="year" id="year" style="width:50%">    
+                        <option value="1" selected="selected">Year 1</option>    
+                        <option value="2">Year 2</option>    
+                        <option value="3" >Year 3</option>  
+                        <option value="4" >Year 4</option>  
+                    </select>    
+                    </div>
+                </div>
+                </div>  <br>
+                
+        
+                
+                <div>
+                    <input class="submitbtn" type="submit" value="Submit" name="submit">
+                </div>           
+            </form>
+                </div>
+        </main>
+        <?php
+            include "footer.inc.php"
+        ?>
+                
+    </body>
+</html>
+?>
