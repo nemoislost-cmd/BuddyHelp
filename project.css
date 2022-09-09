@@ -1,0 +1,242 @@
+.nav-link {
+    color:#3A3B3C;
+}
+.carousel{
+    padding: 50px 0px;
+}
+.material-icons { 
+    background-color: #637E8D; 
+    color: #FEFEFE;
+}
+#icons {
+    margin-right:1%;
+}
+#about-container{
+    margin-top: 50px;
+    background-color: #D87474;
+    padding: 25px 10px;
+    text-align: center;
+    height: 200px;
+    color: #FFFFFF;
+}
+.container-align-center{
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+    padding-top:20px;
+}
+.flex-wrapper {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.img-flex{
+    display:flex;
+    justify-content: center;
+}
+.img-flex img{
+    width:50%;
+}
+
+@media screen and (min-width: 1050px) {
+.carousel-inner img{
+    width: 60%;
+    height: auto;    
+    margin: auto;
+}
+
+.navbar-brand{
+   margin-left: 15px;
+}
+
+#textleft{
+    text-align: left;
+}
+#copywrite{
+    margin-top:10px;
+    height: 100%;
+    margin-bottom: 0px;
+}
+form{
+    width:50%;
+    height: auto;
+    margin: auto;
+}
+
+footer{
+    text-align: center;
+    font-style:italic;
+    font-size: 14px;
+    background-color:#637E8D;
+    color:rgba(255,255,255,.5);
+    max-width: 100%;
+    padding:10px 0px; 
+}
+
+.flex-container{
+    display:flex;
+    justify-content: space-between;  
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+}
+/* Add a background color and some padding around the form */
+@media screen and (max-width: 1049px) {
+    .d-block{
+    width: 60%;
+    height: auto;    
+    margin: auto;
+}
+.navbar{
+    padding-left:15px;
+}
+#textleft{
+    text-align: left;
+}
+#copywrite{
+    margin-top:10px;
+    height: 100%;
+    margin-bottom: 0px;
+}
+form{
+    width:50%;
+    height: auto;
+    margin: auto;
+}
+
+footer{
+    text-align: center;
+    font-style:italic;
+    font-size: 14px;
+    background-color:#637E8D;
+    color:#FEFEFE;
+    max-width: 100%;
+    padding:10px 0px;
+}
+
+.flex-container{
+    flex-wrap: wrap;
+    width:100%;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+}
+
+
+.container{
+   background-color: #C4CBCC; 
+}
+
+.btn btn-primary{
+   background-color: #637E8D;
+   align-content: center;
+    
+}
+
+
+
+
+ .inline{   
+     top:750px;
+     left:450px;
+}   
+  
+    .pagination {   
+        display: inline-block;  
+        position:relative;
+        top:750px;
+        left:350px;
+    }  
+    .pagination a {   
+        font-weight:bold;   
+        font-size:18px;   
+        color: black;   
+        float: left;   
+        padding: 8px 16px;   
+        text-decoration: none;   
+        border:1px solid black;   
+    }   
+    .pagination a.active {   
+            background-color: pink;   
+    }   
+    .pagination a:hover:not(.active) {   
+        background-color: skyblue; 
+    }
+    
+    
+    
+    .icon1{
+        position:relative;
+        
+    }
+    
+    .icondescription1{
+        position:absolute;
+        background:#637E8D;
+        color:#FEFEFE;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        visibility:hidden;
+        opacity:0;
+        transition: opacity .2s, visibility .2s;
+        
+    }
+    
+    .icon1:hover .icondescription1{
+        visibility: visible;
+        opacity:1;
+        
+    }
